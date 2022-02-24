@@ -17,8 +17,32 @@ The REST API to the example app is described below
 
 ![](https://img.shields.io/static/v1?label=GET&message=/api/posts/&color=005599)
 
+```text
+HTTP/1.1 200 OK
+Content-Type: application/json
 ```
-curl -iH 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/
+
+```text
+curl -i -H 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/
+```
+
+**Response**
+
+```json
+[
+    {
+        "content": "Lorem ipsum geripsum git got dumb dipsum",
+        "pk": 1,
+        "published": "2022-02-24T18:07:29.163078+00:00",
+        "title": "The very first title"
+    },
+    {
+        "content": "Updated random post content for mock data",
+        "pk": 2,
+        "published": "2022-02-24T18:42:05.593374+00:00",
+        "title": "Newly Updated post title"
+    }
+]
 ```
 
 ### Create Post
@@ -26,33 +50,82 @@ curl -iH 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/
 
 ![](https://img.shields.io/static/v1?label=POST&message=/api/posts/&color=005599)
 
+```text
+HTTP/1.1 201 OK
+Content-Type: application/json
 ```
-curl -iH 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/
+
+```text
+curl -i -H 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/
 ```
+```json
+[
+    {
+        "content": "Lorem ipsum geripsum git got dumb dipsum",
+        "pk": 1,
+        "published": "2022-02-24T18:07:29.163078+00:00",
+        "title": "The very first title"
+    }
+]
+```
+
 ### Get post
 **Request**
 
 ![](https://img.shields.io/static/v1?label=GET&message=/api/posts/<int:pk>/&color=005599)
 
+```text
+HTTP/1.1 200 OK
+Content-Type: application/json
 ```
-curl -iH 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/<int:pk>/
+
+```text
+curl -i -H 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/<int:pk>/
 ```
+
+**Response**
 
 ### Update post
 **Request**
 
 ![](https://img.shields.io/static/v1?label=PUT&message=/api/posts/<int:pk>/&color=005599)
 
+```text
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
 ```
 curl -iH 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/<int:pk>/
 ```
+```json
+[
+    {
+        "content": "Lorem ipsum geripsum git got dumb dipsum",
+        "pk": 1,
+        "published": "2022-02-24T18:07:29.163078+00:00",
+        "title": "The very first title"
+    }
+]
+```
+
 ### Delete post
 **Request**
 
 ![](https://img.shields.io/static/v1?label=DELETE&message=/api/posts/<int:pk>/&color=005599)
 
+```text
+HTTP/1.1 204 OK
+Content-Type: application/json
 ```
-curl -iH 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/<int:pk>/
+
+```text
+curl -i -H 'Accept: application/json' http://localhost:5000/api/v1/blog/posts/<int:pk>/
+```
+
+**Response**
+```text
+no response
 ```
 
 ### Packages used

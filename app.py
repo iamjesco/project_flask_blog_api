@@ -15,22 +15,17 @@ from models.posts import PostModel
 from models.schemas import posts_schema, post_schema
 
 
-# Wrong route handler function
-@app.errorhandler(400)
-def page_not_found(e):
-	return {'message': 'that route does not exist'}, 400
-
-
 #   Route to get all posts
 @app.get('/')
 def home():
+	#
 	return redirect(url_for('get_all_posts'))
 
 
 @app.get('/api/posts/')
 def get_all_posts():
-	query = PostModel.query.all()
-	result = posts_schema.dump(query)
+	query = PostModel.query.all()   # Retrieve all the posts from the db
+	result = posts_schema.dump(query)   # Convert db data to schema
 	return jsonify(result.data), 200
 
 
@@ -49,8 +44,8 @@ def add_post():
 #   Route to get a single post
 @app.get('/api/posts/')
 def get_post(pk):
-	single_post = PostModel.query.get(pk)
-	if single_post:
+	single_post = PostModel.query.get(pk)   # Retrieve specific post from the db using primary key
+	if single_post:                         # Verify if post exists in db
 		return post_schema.jsonify(single_post), 200
 	return {'message': 'not found'}, 404
 	
