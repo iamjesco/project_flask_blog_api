@@ -27,7 +27,7 @@ def home():
 	return redirect(url_for('get_all_posts'))
 
 
-@app.get('/api/v1/blog/posts/')
+@app.get('/api/posts/')
 def get_all_posts():
 	query = PostModel.query.all()
 	result = posts_schema.dump(query)
@@ -35,7 +35,7 @@ def get_all_posts():
 
 
 #   Route to create a post
-@app.post('/api/v1/blog/posts/')
+@app.post('/api/posts/')
 def add_post():
 	new_post = PostModel(
 		title=request.json.get('title'),
@@ -47,7 +47,7 @@ def add_post():
 
 
 #   Route to get a single post
-@app.get('/api/v1/blog/posts/<int:pk>/')
+@app.get('/api/posts/')
 def get_post(pk):
 	single_post = PostModel.query.get(pk)
 	if single_post:
@@ -56,7 +56,7 @@ def get_post(pk):
 	
 
 #   Route to update a post
-@app.put('/api/v1/blog/posts/<int:pk>')
+@app.put('/api/posts/<int:pk>/')
 def update_post(pk):
 	updated_post = PostModel.query.get(pk)
 	#   data received from request
@@ -71,7 +71,7 @@ def update_post(pk):
 
 
 #   Rout to delete a post
-@app.delete('/api/v1/blog/posts/<int:pk>')
+@app.delete('/api/posts/<int:pk>/')
 def delete_post(pk):
 	single_post = PostModel.query.get(pk)
 	db.session.delete(single_post)
