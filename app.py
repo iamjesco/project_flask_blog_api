@@ -18,7 +18,6 @@ from models.schemas import posts_schema, post_schema
 #   Route to get all posts
 @app.get('/')
 def home():
-	#
 	return redirect(url_for('get_all_posts'))
 
 
