@@ -1,5 +1,6 @@
 # Basic Flask API with SQLALCHEMY
-A basic version of a blog API using Flask with SqlAlchemy and Sqlite3. The standard 5 endpoints available:  
+A basic version of a blog API using Flask with SqlAlchemy and Sqlite3. Meaning of basic is that there's no use of Blueprints, routing classes or Swagger.
+Just plain routing functions. 
 
 ### Tech
 
@@ -130,9 +131,9 @@ no response
 
 ### Packages used
 
-* Flask-Sqlalchemy
-* Flask-Marshmallow
-* Marshmallow-Sqlalchemy
+* [Flask-Sqlalchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+* [Flask-Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
+* [Marshmallow-Sqlalchemy](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/)
 
 ### Notes
 

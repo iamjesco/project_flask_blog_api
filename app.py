@@ -22,6 +22,7 @@ def home():
 	return redirect(url_for('get_all_posts'))
 
 
+#   Route to get all posts
 @app.get('/api/posts/')
 def get_all_posts():
 	query = PostModel.query.all()   # Retrieve all the posts from the db
@@ -42,16 +43,18 @@ def add_post():
 
 
 #   Route to get a single post
-@app.get('/api/posts/')
+@app.get('/api/posts/<int:pk>')
 def get_post(pk):
-	single_post = PostModel.query.get(pk)   # Retrieve specific post from the db using primary key
-	if single_post:                         # Verify if post exists in db
+	# Retrieve specific post from the db using primary key
+	single_post = PostModel.query.get(pk)
+	# Verify if post exists in db
+	if single_post:
 		return post_schema.jsonify(single_post), 200
 	return {'message': 'not found'}, 404
 	
 
 #   Route to update a post
-@app.put('/api/posts/<int:pk>/')
+@app.put('/api/posts/<int:pk>')
 def update_post(pk):
 	updated_post = PostModel.query.get(pk)
 	#   data received from request
@@ -66,12 +69,12 @@ def update_post(pk):
 
 
 #   Rout to delete a post
-@app.delete('/api/posts/<int:pk>/')
+@app.delete('/api/posts/<int:pk>')
 def delete_post(pk):
-	single_post = PostModel.query.get(pk)
-	db.session.delete(single_post)
+	post = PostModel.query.get(pk)
+	db.session.delete(post)
 	db.session.commit()
-	return {'message': f'post with pk {pk} deleted!'}, 204
+	return {}, 204
 
 
 if __name__ == '__main__':
