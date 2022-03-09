@@ -4,10 +4,10 @@ Just plain routing functions.
 
 ### Tech
 
-![](https://img.shields.io/static/v1?style=social&label=Python&message=3.9&color=006600&logo=python)  
-![](https://img.shields.io/static/v1?style=social&label=Flask&message=2.0&color=006600&logo=jetbrains)   
-![](https://img.shields.io/static/v1?style=social&label=Pycharm&message=2021.3.2&color=006600&logo=pycharm)  
-![](https://img.shields.io/static/v1?style=social&label=Sqlite&message=3.0&color=006600&logo=sqlite)  
+![](https://img.shields.io/static/v1?style=for-the-badge&label=Python&message=3.9&color=006600&logo=python)  
+![](https://img.shields.io/static/v1?style=for-the-badge&label=Flask&message=2.0&color=006600&logo=jetbrains)   
+![](https://img.shields.io/static/v1?style=for-the-badge&label=Pycharm&message=2021.3.2&color=006600&logo=pycharm)  
+![](https://img.shields.io/static/v1?style=for-the-badge&label=Sqlite&message=3.0&color=006600&logo=sqlite)  
 
 # Rest API
 The REST API to the example app is described below
