@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://aklmxjsdqjwmlj:bfc4496f12fdd618d86d092b25d8dea9cde23a12c11d416ffb1589fd640f02bf@ec2-52-73-155-171.compute-1.amazonaws.com:5432/de3nk8v0847kgr"
 
 # Dev DB
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost/blogdb"
 # app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///blogdb.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
