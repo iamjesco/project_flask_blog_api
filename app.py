@@ -19,8 +19,6 @@ ma = Marshmallow(app)
 from models.posts import PostModel
 from models.schemas import posts_schema, post_schema
 
-db.create_all()
-
 
 @app.get('/')
 def home():
