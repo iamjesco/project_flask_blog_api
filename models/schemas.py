@@ -6,7 +6,8 @@ class PostSchema(ma.Schema):
 		fields = ('pk', 'title', 'slug', 'body', 'created', 'author', 'featured', 'updated')
 		
 
-post_schema = PostSchema(strict=True)
-posts_schema = PostSchema(many=True, strict=True)
+post_schema = PostSchema()
+posts_schema = PostSchema(many=True)
+
 
 
