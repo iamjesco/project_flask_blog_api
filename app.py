@@ -6,6 +6,10 @@ import re
 
 app = Flask(__name__)
 
+# prod db
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://jdubpxwdykfoqh:79ed972e8d6880f5b2367b0115c217d090f17a322e2f387bea678f1b83e007b6@ec2-54-236-137-173.compute-1.amazonaws.com:5432/dfh74vm5cv4an6"
+
+# Dev DB
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///blogdb.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
