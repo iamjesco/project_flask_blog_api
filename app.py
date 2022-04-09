@@ -7,10 +7,10 @@ import re
 app = Flask(__name__)
 
 # prod db
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://jdubpxwdykfoqh:79ed972e8d6880f5b2367b0115c217d090f17a322e2f387bea678f1b83e007b6@ec2-54-236-137-173.compute-1.amazonaws.com:5432/dfh74vm5cv4an6"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://aklmxjsdqjwmlj:bfc4496f12fdd618d86d092b25d8dea9cde23a12c11d416ffb1589fd640f02bf@ec2-52-73-155-171.compute-1.amazonaws.com:5432/de3nk8v0847kgr"
 
 # Dev DB
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///blogdb.db'
+# app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///blogdb.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
