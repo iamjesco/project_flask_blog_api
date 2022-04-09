@@ -126,11 +126,14 @@ Content-Type: application/json
 * [Flask-Sqlalchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 * [Flask-Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
 * [Marshmallow-Sqlalchemy](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/)
+* [Psycopg](https://www.psycopg.org/)  // PostgreSQL adapter for the Python programming language
+* [Gunicorn](https://gunicorn.org/)  // Python WSGI HTTP Server for UNIX
 
 ### Notes
 
 * Requirements.txt file is included
 * The latest Marshmallow version (3.14.1) throws a type error: got an unexpected keyword argument 'strict'. The workaround is to install an older version (2.20.1)
+* For some reason I can't get the Postgress python adapter to work on m1 mac. 
 
 
 
