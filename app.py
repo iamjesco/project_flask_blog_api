@@ -22,6 +22,7 @@ from models.schemas import posts_schema, post_schema
 
 db.create_all()
 
+
 @app.get('/')
 def home():
 	return redirect(url_for('get_all_posts'))
